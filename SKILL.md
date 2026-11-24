@@ -87,7 +87,7 @@ A single page must never have purple buttons, green headings, orange cards, and 
 
 ### Strict Ban on Emojis as UI Icons (SVG Icons Only)
 > [!IMPORTANT]
-> **NEVER use emojis (🚀, 🔥, 📊, ⚙️, 🔔, 👤, 🛒, ❌, etc.) as UI icons.** Emojis render unpredictably across OS platforms (Apple, Google, Windows), clash with mature color systems, and look like toy mockups.
+> **NEVER use emojis as UI icons.** Emojis render unpredictably across OS platforms (Apple, Google, Windows), clash with mature color systems, and look like toy mockups.
 >
 > **MANDATORY FOR EVERY UI TASK:**
 > - If an icon is needed, use **clean SVG icons only** (inline `<svg>` or `.svg` files).
