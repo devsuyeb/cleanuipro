@@ -3,9 +3,10 @@ name: cleanuipro
 description: >-
   Clean, mature UI/UX design intelligence and implementation standards.
   Eliminates AI copy bloat, redundant explanations, childish colored accent borders,
-  and circus color palettes. Enforces concise microcopy, scalable UI controls
-  (searchable comboboxes vs dumb dropdowns), viewport-safe tooltips, full light/dark
-  mode harmony, and mobile-responsive data lists with progressive disclosure.
+  gratuitous bold typography, and circus color palettes. Enforces concise microcopy,
+  scalable UI controls (searchable comboboxes vs dumb dropdowns), disciplined font
+  weights, viewport-safe tooltips, full light/dark mode harmony, and mobile-responsive
+  data lists with progressive disclosure.
 metadata:
   version: "1.0.0"
 ---
@@ -85,7 +86,26 @@ A single page must never have purple buttons, green headings, orange cards, and 
 
 ---
 
-## 4. Viewport-Safe Micro-Help & Tooltips
+## 4. Typography Weight Discipline (Stop the Bold Epidemic)
+
+> [!IMPORTANT]
+> **Stop making everything bold.** AI assistants habitually slap `font-bold` (700+) across every label, table cell, badge, paragraph, list item, and small caption. This creates visual fatigue and destroys visual hierarchy.
+
+### The Weight Hierarchy Standard:
+
+| Weight Class | CSS / Tailwind | Permitted Usage | Prohibited Usage (AI Tells) |
+| :--- | :--- | :--- | :--- |
+| **Normal** (400) | `font-normal` (or default) | **Default for 85%+ of UI text**: Body text, descriptions, table cells, form labels, tooltips, secondary metadata, captions. | Never upgrade body copy or standard labels to bold just to "make them stand out". |
+| **Medium** (500) | `font-medium` | **Subtle structural emphasis**: Interactive buttons, tab labels, table header titles (`th`), active dropdown items. | Avoid stacking multiple medium elements inside a single row. |
+| **Semibold** (600) | `font-semibold` | **Strict hierarchy milestones**: Primary page titles (H1/H2), key numerical KPI metrics (e.g. `$24,500`), primary modal headers. | Never use on small body text, table data cells, or form inputs. |
+| **Bold / Heavy** (700+) | `font-bold` / `font-extrabold` | **Strictly restricted**: Hero landing display headlines only. | **BANNED on standard UI components**: No bold table cells, no bold form labels, no bold tooltips. |
+
+### Contrast Rule:
+Create visual hierarchy through **font size scale** (`text-sm`, `text-xs`) and **color contrast** (`text-slate-900` vs `text-slate-500` / `dark:text-slate-100` vs `dark:text-slate-400`), **never** by making everything bold.
+
+---
+
+## 5. Viewport-Safe Micro-Help & Tooltips
 
 Never clutter the interface with descriptive paragraphs under every input or button.
 - If an explanation is truly necessary for an esoteric metric (e.g. *"Net Churn Rate calculation"*), use a subtle info icon `(i)` with a tooltip.
@@ -98,7 +118,7 @@ Never clutter the interface with descriptive paragraphs under every input or but
 
 ---
 
-## 5. Light & Dark Mode Coherence
+## 6. Light & Dark Mode Coherence
 
 Every new page or component must dynamically inherit the active theme.
 
@@ -110,7 +130,7 @@ Every new page or component must dynamically inherit the active theme.
 
 ---
 
-## 6. Responsive Lists & Tables (Progressive Disclosure)
+## 7. Responsive Lists & Tables (Progressive Disclosure)
 
 Data tables that squeeze 7+ columns on a phone cause ugly horizontal overflows and truncated gibberish.
 
@@ -145,11 +165,12 @@ Data tables that squeeze 7+ columns on a phone cause ugly horizontal overflows a
 
 ---
 
-## 7. Quality Checklist Before Shipping Any UI
+## 8. Quality Checklist Before Shipping Any UI
 
 - [ ] **Are labels concise?** (No *"Calculated age from..."* or *"Click here to..."*).
 - [ ] **Are large lists searchable?** (No 50+ item raw `<select>` tags).
 - [ ] **Are childish colored left/top borders avoided?** (Clean, subtle 1px border & elevation used instead).
+- [ ] **Is bold typography strictly restrained?** (Default 400 normal weight; semibold 600 reserved strictly for primary titles and KPI metrics; no bold labels or table cells).
 - [ ] **Is the color palette restrained?** (1 primary accent, neutrals for everything else, semantic red/green only for status).
 - [ ] **Does it look intentional in both Light AND Dark mode?**
 - [ ] **Do tooltips stay fully inside the screen?**

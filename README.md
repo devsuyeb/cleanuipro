@@ -11,7 +11,10 @@
    - Eliminates redundant button explanations (e.g., replaces *"Click here to save your changes to database"* with `Save`).
 2. **Scale-Aware UI Controls:**
    - Replaces dumb 100-item `<select>` tags with searchable comboboxes, typeaheads, and debounced autocomplete inputs.
-3. **No Childish Colored Stripe Borders:**
+3. **Strict Typography Weight Discipline (Stop the Bold Epidemic):**
+   - Eliminates gratuitous bold fonts (`font-bold`, `font-extrabold`) slapped onto every label, table cell, badge, and small caption.
+   - Enforces default normal weight (`font-normal`, 400), subtle medium (`font-medium`, 500) for interactive buttons/headers, and reserves semibold (`font-semibold`, 600) strictly for primary titles and KPI figures.
+4. **No Childish Colored Stripe Borders:**
    - Bans dated `border-l-4 border-blue-500` / `border-t-4` styling.
    - Enforces mature elevation, 1px subtle borders, and clean typography.
 4. **Color Discipline (No Circus Palettes):**
@@ -34,6 +37,7 @@ cleanuipro/
 ├── .gitignore
 └── references/
     ├── microcopy-and-anti-bloat.md
+    ├── typography-weight-discipline.md
     ├── scale-aware-controls.md
     ├── tooltips-and-popovers.md
     └── responsive-lists-and-tables.md
@@ -53,6 +57,7 @@ git clone git@github.com:devsuyeb/cleanuipro.git ~/.gemini/config/skills/cleanui
 ## Documentation
 
 - [Microcopy & Anti-Bloat Guide](references/microcopy-and-anti-bloat.md)
+- [Typography Weight Discipline](references/typography-weight-discipline.md)
 - [Scale-Aware Controls Guide](references/scale-aware-controls.md)
 - [Viewport-Safe Tooltips & Popovers](references/tooltips-and-popovers.md)
 - [Responsive Lists & Tables (Progressive Disclosure)](references/responsive-lists-and-tables.md)
