@@ -17,13 +17,16 @@
 4. **No Childish Colored Stripe Borders:**
    - Bans dated `border-l-4 border-blue-500` / `border-t-4` styling.
    - Enforces mature elevation, 1px subtle borders, and clean typography.
-4. **Color Discipline (No Circus Palettes):**
+5. **Strict Zero Emojis as Icons (SVG Only):**
+   - Strictly bans emojis (🚀, 🔥, ⚙️, etc.) as UI icons across all components.
+   - Enforces clean inline SVGs or `.svg` files with `currentColor` stroke/fill for crisp, theme-aware rendering across all operating systems.
+6. **Color Discipline (No Circus Palettes):**
    - 60-30-10 rule: 1 single primary brand accent, neutral surfaces/text, and functional-only semantic colors (red/green reserved strictly for alerts & badges).
-5. **Viewport-Safe Tooltips:**
+7. **Viewport-Safe Tooltips:**
    - Prevents tooltips from clipping off-screen or being trapped under parent `overflow: hidden` elements.
-6. **Full Light/Dark Mode Coherence:**
+8. **Full Light/Dark Mode Coherence:**
    - Enforces semantic design tokens and dark mode pairs for all components.
-7. **Mobile-Responsive Data Lists (Progressive Disclosure):**
+9. **Mobile-Responsive Data Lists (Progressive Disclosure):**
    - Enforces 2-3 priority columns on mobile screens, tucking secondary details into clean sub-lines or modals/drawers instead of breaking horizontal viewport bounds.
 
 ---

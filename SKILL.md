@@ -3,10 +3,11 @@ name: cleanuipro
 description: >-
   Clean, mature UI/UX design intelligence and implementation standards.
   Eliminates AI copy bloat, redundant explanations, childish colored accent borders,
-  gratuitous bold typography, and circus color palettes. Enforces concise microcopy,
-  scalable UI controls (searchable comboboxes vs dumb dropdowns), disciplined font
-  weights, viewport-safe tooltips, full light/dark mode harmony, and mobile-responsive
-  data lists with progressive disclosure.
+  gratuitous bold typography, circus color palettes, and emoji icons. Strictly
+  enforces clean SVG icons only, concise microcopy, scalable UI controls
+  (searchable comboboxes vs dumb dropdowns), disciplined font weights, viewport-safe
+  tooltips, full light/dark mode harmony, and mobile-responsive data lists with
+  progressive disclosure.
 metadata:
   version: "1.0.0"
 ---
@@ -83,6 +84,16 @@ A single page must never have purple buttons, green headings, orange cards, and 
    - **10% Single Accent:** **ONE** primary brand color for actionable elements (active states, primary CTA, active tab).
 2. **Semantic Colors are Functional, Never Decorative:**
    - Red (`danger`), Green (`success`), and Amber (`warning`) are strictly reserved for alerts, validation, and status badges. **Never** use green or red as decorative background accents.
+
+### Strict Ban on Emojis as UI Icons (SVG Icons Only)
+> [!IMPORTANT]
+> **NEVER use emojis (🚀, 🔥, 📊, ⚙️, 🔔, 👤, 🛒, ❌, etc.) as UI icons.** Emojis render unpredictably across OS platforms (Apple, Google, Windows), clash with mature color systems, and look like toy mockups.
+>
+> **MANDATORY FOR EVERY UI TASK:**
+> - If an icon is needed, use **clean SVG icons only** (inline `<svg>` or `.svg` files).
+> - Set SVG `stroke` or `fill` to `currentColor` so the icon automatically harmonizes with the text color and responds to light/dark mode transitions.
+> - Avoid bloated external CDN icon fonts (like heavy FontAwesome bundles) unless explicitly requested; prefer lightweight, targeted SVGs.
+> - For action buttons: Use clean SVGs (e.g., Eye icon for preview, Trash for delete, Checkmark for confirmed) with viewport-safe tooltips instead of bloated text buttons or emojis.
 
 ---
 
@@ -170,6 +181,7 @@ Data tables that squeeze 7+ columns on a phone cause ugly horizontal overflows a
 - [ ] **Are labels concise?** (No *"Calculated age from..."* or *"Click here to..."*).
 - [ ] **Are large lists searchable?** (No 50+ item raw `<select>` tags).
 - [ ] **Are childish colored left/top borders avoided?** (Clean, subtle 1px border & elevation used instead).
+- [ ] **Are emojis completely banned as UI icons?** (Clean inline SVGs or .svg files used exclusively).
 - [ ] **Is bold typography strictly restrained?** (Default 400 normal weight; semibold 600 reserved strictly for primary titles and KPI metrics; no bold labels or table cells).
 - [ ] **Is the color palette restrained?** (1 primary accent, neutrals for everything else, semantic red/green only for status).
 - [ ] **Does it look intentional in both Light AND Dark mode?**
